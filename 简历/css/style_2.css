@@ -1,0 +1,22 @@
+body{
+    font-size: 1.2em;
+    width: 80%;
+    margin: 0 auto;
+}
+span{
+    font-weight: bold;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+.left{
+    width: 20%;
+    background: rgba(29, 210, 255, 0.938);
+    color:white;
+    float: left;
+    text-align :center;
+    height: 850px;
+}
+.right{
+    width: 79%;
+    float: right;
+}
