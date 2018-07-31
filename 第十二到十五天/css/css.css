@@ -1,0 +1,264 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 12px;
+    color: white;
+}
+.content{
+    width: 100%;
+    /* 先给高度看样式 */
+    height: 988px;
+    display: flex;
+}
+.content_left{
+    flex: 0 1 5%;
+    height: auto;
+    
+    position: relative;
+    
+    background: #1c1d20;
+}
+.left_up{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    /* 给个颜色吧 */
+    /* background: #792341; */
+}
+.content_left .left_up img{
+
+    height: 80%;
+    width: 80%;
+    padding-bottom: 20px;
+    background-repeat: no-repeat;
+    /* background-size: 100% 100%; */
+}
+.left_down{
+    width: 100%;;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    left: 0px;
+    bottom: 0px;
+    margin-bottom:20px; 
+    /* 给个高度，颜色看下吧 */
+    /* background: #648252; */
+}
+.content_left .left_down img{
+    background-repeat: no-repeat;
+    height: 50%;
+}
+.content_middle{
+    flex: 0 1 18%;
+    height: auto;
+
+    background:#313131;
+
+    position: relative;
+}
+.middle_up{
+        width: 100%;
+         /* 先给高度看样式 */
+        height: auto;
+
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        /* 给个颜色吧 */
+        /* background: blueviolet; */
+}
+.middle_up{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+}
+.middle_up img{
+    width: auto;
+}
+.middle_up ul{
+    list-style-type: none;
+}
+.middle_up ul li{
+    width: auto;
+    margin: 5px 10px;
+    font-size: 1.5em;
+    
+}
+.middle_up ul li span{
+    line-height: 1em;
+    height: 1em;
+    margin-right:14px; 
+    font-size: 1.2em;
+    text-align: center;
+    width: 14%;
+    float: right;
+    background-color: aqua;
+    border-radius: 20px;
+}
+.dddd{
+    line-height: 1em;
+    height: 1em;
+    margin-right:14px; 
+    font-size: 1.2em;
+    text-align: center;
+    width: 7%;
+    float: right;
+    border-radius: 20px;
+    background-color: red;
+}
+.middle_up .row{
+    font-size: 1.4em;
+    color: blanchedalmond;
+    margin-bottom:20px; 
+}
+.middle_up .row img{
+    /* width: auto;
+    float: right; */
+    margin-right:14px; 
+    text-align: center;
+    line-height: 1em;
+    height: 27px;
+    float: right;
+}
+.middle_up_middle li img{
+    width: auto;
+    margin-right: 30px;
+}
+.divider img{
+    width: 90%;
+    margin-top: 10px; 
+    text-align: center;
+}
+.middle_up_up,
+.middle_up_middle,
+.middle_up_down{
+    padding-bottom: 20px;
+}
+.middle_up ul span:hover,
+.middle_up ul li:hover,
+.middle_up .row img:hover{
+    cursor: pointer;
+}
+.middle_down{
+    position: absolute;
+    left: 0px;
+    margin: 20px;
+    font-size: 2em;
+    bottom: 0px;
+    /* 给个高度，颜色看下吧 */
+    height: 60px;
+    /* background: pink; */
+}
+.middle_down .ddivi{
+    width: 80%;
+    text-align: center;
+    background-color: seagreen;
+    margin: 20px 0;
+    height: 4px;
+    border: 1px silver solid;
+    border-radius: 12px;
+}
+.content_right{
+    flex-grow:1;
+    height: auto;
+    /* background: olivedrab; */
+}
+.content_right p{
+    color: #1c1d20;
+
+}
+.content_right_top{
+    width: 100%;
+    height: 8%;
+    /* 给个高度，颜色看下吧 */
+    /* background: turquoise; */
+}
+.content_right_top p {
+    font-size: 2.5em;
+    line-height: 2.3em;
+    margin-left: 20px;
+}
+.content_right_middle{
+    width: 100%;
+    height: 4%;
+
+    /* 给个高度，颜色看下吧 */
+    /* background: navajowhite; */
+}
+.right_middle_left{
+    width: 30%;
+    float: left;
+     /* 给个高度，颜色看下吧 */
+     border: 1px #b1b1b1 solid;
+     box-shadow: 1px 1px 5px #b1b1b1;
+     border-right:0px; 
+    height: 100%;   
+    /* background-color: bisque; */
+}
+.right_middle_right{
+    padding-top:3px; 
+    float: left;
+    width: 70%;
+    display: flex;
+    box-shadow: 0px 0px 5px #b1b1b1;
+    height: 100%;
+     /* 给个高度，颜色看下吧 */
+     /* background-color: aqua;  */
+     justify-content: flex-end;
+     align-content: center;
+     border: 1px #b1b1b1 solid;
+
+}
+
+.right_middle_right p{
+    margin-top:4px; 
+    margin-left:20px; 
+    flex-grow: 1;
+    flex-basis: 40px;
+    color: #1c1d20;
+}
+.right_middle_right img{
+    /* display: inline-block; */
+}
+.content_right_down{
+    clear: both;
+
+    width: 100%;
+    height: 82%;
+    /* background-color: #792341; */
+    display: flex;
+}
+.right_down_left{
+    flex: 0 1  30%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* background-color: aliceblue; */
+}
+.right_down_left img{
+ 
+}
+
+.right_down_right{
+    /* background-color: beige; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border-left:#b1b1b1 1px solid; 
+}
+.right_down_right img{
+    margin: 20px 40px;
+}
