@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function time(){
+        var time = new Date();
+        var h = time.getHours();
+        var m = time.getMinutes();
+        var s = time.getSeconds();
+            
+        m = checkTime(m);
+        s = checkTime(s);
+
+        document.getElementById("txt").innerHTML=h+":"+m+":"+s;
+        var t =  setTimeout('time()', 500);
+        }
+        function checkTime(i){
+            i=(i<9)?"0"+i:i;
+            return i;
+        }
+    </script>
+    <body onload="time()">
+        <p id="txt"></p>
+    </body>
+
+</html>

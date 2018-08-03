@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    body{
+        text-align: center;
+        margin: 200px;
+    }
+    #ensure{
+        font-size: 29px;
+        font-family: 'Courier New', Courier, monospace;
+
+    }
+    #prompt{
+        font-size: 18px;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    #i{
+        font-size: 50px;
+        font-family: 'Courier New', Courier, monospace;
+        color: brown;
+    }
+    </style>
+</head>
+<body>
+    <h1>猜字游戏</h1>
+    <p>现在有一个随机数字在1到100之间，我会提示你，你给出的数字过高还是过低，请在最少的次数中答对。最多有8次机会。</p>
+    输入你猜的数字：<input id="text" type="text">&nbsp;&nbsp;<input type="button" onclick="guess()" value="点击确认">
+    <p id="pre_guess">你已猜的数字:</p>
+    <div id="ensure"></div>
+    <div id="prompt"></div>
+    <div id="i"></div>
+    <script>
+        var random =getrandom();
+        var i = 0 ;
+            function guess(){
+                var num = haveguess();
+
+                if(num!=''){
+                    judge(num,random);
+                    i++;
+                    document.getElementById("i").innerHTML="你已经猜了" +"<em>"+i+"</em>"+"&nbsp"+"次";
+                    if(i>7){
+                    document.getElementById("i").innerHTML="GAMEOVER";
+                    document.getElementById("prompt").innerHTML='';
+                    document.getElementById("ensure").innerHTML='';
+                }
+                }
+                else 
+                    return false;
+            }
+            function getrandom(){
+                var random = parseInt(100*(Math.random()))+1;
+                return random;
+            }
+            function haveguess(){
+                var num = document.getElementById("text").value;
+                //添加入文本节点
+                var node =document.createTextNode(num+" ");
+                // 把文本节点追加到pre_guess元素中
+                document.getElementById("pre_guess").appendChild(node);
+                return num;
+            }
+            function judge(num,random){
+                if(num<random){
+                    document.getElementById("ensure").style.color="red";
+                    document.getElementById("ensure").style.fontSize="25px"
+                    document.getElementById("ensure").innerHTML="errrrr!"+"&nbsp"+"猜错啦";
+                    document.getElementById("prompt").innerHTML="你输入的值太小";
+                }
+                else if(num>random){
+                    document.getElementById("ensure").style.color="red";
+                    document.getElementById("ensure").style.fontSize="25px"
+                    document.getElementById("ensure").innerHTML="errrrr!猜错啦";
+                    document.getElementById("prompt").innerHTML="你输入的值"+"<strong>"+"&nbsp"+"太大"+"</strong>";
+                }
+                else{
+
+                    document.getElementById("ensure").style.color="green";
+                    document.getElementById("ensure").style.fontSize="20px"
+                    document.getElementById("ensure").innerHTML="bingooooo~";
+                    document.getElementById("prompt").innerHTML="恭喜你";
+                }
+            }
+        </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h1>我的第一段 JavaScript</h1>
+
+        <p>
+            请输入数字，如果输入值不是数字，浏览器会弹出提示框
+        </p>
+        <input type="text" name="" id="demo">
+        <button type="button" onclick="myFunction()">点击这里</button>
+
+        <script>
+            function myFunction(){
+                var  x=document.getElementById("demo").value;
+                if(x==''||isNaN(x)){
+                    alert('not numeric');
+                }
+                else
+                    alert("是数字");
+            }
+        </script>
+</body>
+</html>
