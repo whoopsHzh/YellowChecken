@@ -17,6 +17,9 @@ table{
 td{
     border: 2px solid #dad6d6;
 }
+td.r{
+    height:auto;
+}
 .top{
     color: #fff;
     height: 70px;
