@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简历1</title>
+    <link rel="stylesheet" href="css/style_3.css">
+    <script src="js/js.js"></script>
+    <style>
+    .hidden{
+        position: absolute;
+        left: 50%;
+        top: 90%;
+        margin-left:-202px;
+        margin-top: -20px;
+        z-index: -1;
+    }
+    .hidden button{
+        background-color: salmon;
+        border-radius: 30px;
+        width: 200px;
+        height: 40px;
+    }
+    #count{
+        width: 490px;
+        margin: 20% auto;
+        position: absolute;
+        right: 100%;
+    }
+    </style>
+</head>
+<body>
+    <div class="hidden">
+        <button id="text" onclick="getText()" >显示练习题</button>
+        <button id="rusume" onclick="getResume()" >显示简历</button>
+    </div>
+
+    <!-- 练习 -->
+    <div id="count">
+            <input id="first-number" type="number" value="0" placeholder="第一个数字">
+            <input id="second-number" type="number" value="0" placeholder="第二个数字">
+            <button id="add-btn" onclick="add()">加</button>
+            <button id="minus-btn" onclick="minus()">减</button>
+            <button id="times-btn" onclick="times()">乘</button>
+            <button id="divide-btn" onclick="divide()">除</button>
+            <p id="result">运算结果</p>
+    </div>
+
+    <!-- 简历 -->
+    <div id="con">
+    <table>
+        <tr>
+            <td colspan="2" class="top"><strong>简历</strong>
+            </td>
+        </tr>
+        <tr>
+            <td class="l">基本信息</td>
+            <td class="r">
+                <div class="rr">
+                        <span>姓名</span>黄三
+                        <span>性别</span>男
+                        <span>应聘职位</span>Web前端工程师
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="l">联系方式</td>
+            <td class="r">
+                    <div class="rr">
+                            <p>
+                                <span>手机</span>123123321123
+                                <span>Email</span><a href="baidu.com">81312@qq.com</a>
+                                <span>个人主页</span><a href="baidu.com">github</a>
+                            </p>
+                    </div>
+                </td>
+        </tr>
+        <tr>
+            <td class="l">能力描述</td>
+            <td class="r">
+                    <div class="rr">
+                            <dt><span>技术能力</span></dt>
+                            <dd>熟练掌握HTML,CSS,JacaScript</dd><br>
+                            <dt><span>综合能力</span></dt>
+                            <dd>良好的沟通，主动积极，努力勤奋</dd>
+                    </div>
+            </td>
+        </tr>
+        <tr>
+            <td class="l">教育经历</td>
+            <td class="r">
+                    <div class="rr">
+                            <dt><span>本科</span></dt>
+                            <dd>百度前端技术学院</dd><br>
+                            <dt><span>研究生</span></dt>
+                            <dd>百度前端技术学院</dd>
+                    </div>
+                </td>
+        </tr>
+        <tr>
+            <td class="l">项目经历</td>
+            <td class="r">
+                    <div class="rr">
+                            <dt><span>消毒消毒</span></dt>
+                            <dd>作为前端工程师角色参与了ADC组件开发</dd>
+                            <dt><span>SAN Doc</span></dt>
+                            <dd>作为文档工程师参与了ASN DOC编写</dd>
+                    </div>
+            </td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>
