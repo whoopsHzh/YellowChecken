@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge, chrome=1">
-<title>公众号：有一件事我替你讲</title>
+<title>鍏紬鍙凤細鏈変竴浠朵簨鎴戞浛浣犺</title>
 </head>
 <body>
 <script>
@@ -39,7 +39,8 @@ function is_ios() {
 }
  
 function android_auto_jump() {
-    WeixinJSBridge.invoke("jumpToInstallUrl", {}, function(e) {});
+ WeixinJSBridge.invoke("jumpToInstallUrl", {},
+    function(e) {});
     window.close();
     WeixinJSBridge.call("closeWindow")
 }
