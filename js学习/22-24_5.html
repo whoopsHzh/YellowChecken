@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id="queue-input1" type="text">
+    <input id="queue-input2" type="text">
+    <p id="queue-cont">队列内容：apple-&gt;pear</p>    
+    <button id="in-btn">入队</button>
+    <button id="out-btn">出队</button>
+    <button id="font-btn">打印队头元素内容</button>
+    <button id="empty-btn">判断队列是否为空</button>
+
+
+    <input id="stack-input" type="text">
+    <p id="stack-cont">栈内容：apple-gt;pear</p>    
+    <button id="push-btn">进栈</button>
+    <button id="pop-btn">退栈</button>
+    <button id="font-btn">打印栈顶元素内容</button>
+    <button id="empty-btn">判断栈是否为空</button>
+
+    <script>
+
+    var stack = ["apple", "pear"];
+
+</script>
+<script>
+
+    var queue = ["apple", "pear"],
+        buttons =  document.getElementsByTagName('button'),
+        inputA = document.getElementById('queue-input1'),
+        inputB = document.getElementById('queue-input2'),
+        cont = document.getElementById('queue-cont'),
+        input1 = document.getElementById('stack-input'),
+        stackCont = document.getElementById('stack-cont');
+
+
+    buttons[0].onclick = function(){
+        
+        if (inputA) {  
+            queue.unshift(inputA.value);
+        }
+        cont.innerHTML ='队列内容：'+ queue.join('-&gt;');
+    }
+    buttons[1].addEventListener('click',function() {
+        queue.pop();
+        cont.innerHTML ='队列内容：'+ queue.join('-&gt;');
+    })
+    buttons[2].addEventListener('click',function() {
+        cont.innerHTML = '队列内容：'+queue[queue.length-1];
+    })
+    buttons[3].addEventListener('click',function() {
+        if (queue.length==0) {
+            alert('队列为空');
+        }
+        else alert('队列不为空');
+    })
+    buttons[4].addEventListener('click',function() {
+        if (inputA) {
+            stack.unshift(input1.value);
+        }
+        stackCont.innerHTML= '栈内容：'+stack;
+    })
+</script>
+
+</body>
+</html>
