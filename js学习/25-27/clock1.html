@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mini-clock</title>
+</head>
+<body onload="getTime()">
+    <section id="time">
+    </section>
+    <select id="year-select">
+            <option value="2000">2000</option>
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            ……
+            <option value="2032">2002</option>
+        </select>
+        
+        <select id="month-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            ……
+            <option value="12">12</option>
+        </select>
+        
+        <select id="day-select">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            ……
+            <option value="31">31</option>
+        </select>
+        
+        <select id="hour-select">
+            <option value="0">00</option>
+            <option value="1">01</option>        
+            ……
+            <option value="23">23</option>
+        </select>
+        
+        <select id="minite-select">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            ……
+            <option>59</option>
+        </select>
+        
+        <select id="second-select">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            ……
+            <option>59</option>
+        </select>
+        
+        <p id="result-wrapper">现在距离 2001年1月1日星期X HH:MM:SS 还有 X 天 X 小时 X 分 X 秒</p>
+        
+          
+            <script>
+
+                function getTime(){
+                    var today = new Date(),
+                     weekend = ["星期一","星期二","星期三","星期四","星期五","星期六","星期日"],
+                     y = today.getFullYear(),
+                     month = today.getMonth()+1,
+                     d = today.getDate(),
+                     h= today.getHours(),
+                     m = today.getMonth(),
+                     s = today.getSeconds(); 
+                    h = check(h);
+                    m = check(m);
+                    s = check(s);
+                    document.getElementById('time').innerHTML = y+'年'+month+'月'+d+'日'+weekend[today.getDay()]+' '+h+':'+m+':'+s;
+                    console.log(document.getElementById('time'));
+                    t = setTimeout(getTime, 500);
+                }
+                function check(params) {
+                    if (params<10) {
+                        return '0'+params;
+                    }
+                    else return params;
+                }
+            </script>
+        </body>
+</html>
